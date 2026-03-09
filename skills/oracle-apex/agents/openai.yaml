@@ -1,0 +1,7 @@
+interface:
+  display_name: "Oracle APEX"
+  short_description: "Complete Oracle APEX workflow for IDE agents"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/card.svg"
+  brand_color: "#C74634"
+  default_prompt: "Use $oracle-apex to handle this Oracle APEX export, SQLcl, implementation, or review task safely."

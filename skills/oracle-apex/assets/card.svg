@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320">
+  <rect width="512" height="320" rx="40" fill="#F6E5DA"/>
+  <rect x="28" y="28" width="456" height="264" rx="28" fill="#C74634"/>
+  <rect x="66" y="66" width="142" height="172" rx="18" fill="#FFF3E8"/>
+  <path d="M92 104h92M92 130h92M92 156h68" fill="none" stroke="#C74634" stroke-linecap="round" stroke-width="14"/>
+  <circle cx="324" cy="122" r="42" fill="none" stroke="#FFE0D1" stroke-width="18"/>
+  <path d="m355 153 39 39" fill="none" stroke="#FFE0D1" stroke-linecap="round" stroke-width="18"/>
+  <path d="m286 210 26 26 47-51" fill="none" stroke="#FFE0D1" stroke-linecap="round" stroke-linejoin="round" stroke-width="18"/>
+  <text x="66" y="278" fill="#FFF3E8" font-family="Verdana, sans-serif" font-size="34" font-weight="700">Oracle APEX</text>
+</svg>

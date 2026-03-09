@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320">
-  <rect width="512" height="320" rx="40" fill="#DCEEE7"/>
-  <rect x="28" y="28" width="456" height="264" rx="28" fill="#246B5A"/>
-  <path d="M88 210 240 58l44 44-152 152H88z" fill="#E8F5EF"/>
-  <path d="m234 52 39-39 39 39-39 39z" fill="#BFE5D4"/>
-  <path d="M78 238h188" fill="none" stroke="#E8F5EF" stroke-linecap="round" stroke-width="18"/>
-  <text x="78" y="270" fill="#E8F5EF" font-family="Verdana, sans-serif" font-size="34" font-weight="700">Safe Edit</text>
-</svg>

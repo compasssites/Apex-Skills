@@ -1,7 +1,0 @@
-interface:
-  display_name: "Oracle APEX Safe Edit"
-  short_description: "Implement safe Oracle APEX export changes"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/card.svg"
-  brand_color: "#246B5A"
-  default_prompt: "Use $oracle-apex-safe-edit to implement this Oracle APEX change safely in exported files."

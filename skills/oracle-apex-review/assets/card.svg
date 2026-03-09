@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 320">
-  <rect width="512" height="320" rx="40" fill="#F3E7CF"/>
-  <rect x="28" y="28" width="456" height="264" rx="28" fill="#8E5B14"/>
-  <circle cx="176" cy="142" r="62" fill="none" stroke="#FFF5D9" stroke-width="18"/>
-  <path d="M220 186 280 246" fill="none" stroke="#FFF5D9" stroke-linecap="round" stroke-width="18"/>
-  <path d="M144 142h64M176 110v64" fill="none" stroke="#FFF5D9" stroke-linecap="round" stroke-width="14"/>
-  <text x="62" y="274" fill="#FFF5D9" font-family="Verdana, sans-serif" font-size="34" font-weight="700">Review</text>
-</svg>

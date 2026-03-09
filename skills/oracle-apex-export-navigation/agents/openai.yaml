@@ -1,7 +1,0 @@
-interface:
-  display_name: "Oracle APEX Export Navigation"
-  short_description: "Locate APEX export files and import commands"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/card.svg"
-  brand_color: "#C74634"
-  default_prompt: "Use $oracle-apex-export-navigation to find the right Oracle APEX export files and SQLcl import commands for this task."

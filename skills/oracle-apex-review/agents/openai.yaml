@@ -1,7 +1,0 @@
-interface:
-  display_name: "Oracle APEX Review"
-  short_description: "Review Oracle APEX export changes and risks"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/card.svg"
-  brand_color: "#8E5B14"
-  default_prompt: "Use $oracle-apex-review to review these Oracle APEX changes for regressions and workflow issues."
