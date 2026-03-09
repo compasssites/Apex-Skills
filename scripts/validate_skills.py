@@ -10,6 +10,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILLS_DIR = REPO_ROOT / "skills"
 NAME_RE = re.compile(r"^[a-z0-9-]{1,63}$")
+HEX_RE = re.compile(r"^#[0-9A-Fa-f]{6}$")
 
 
 def read_lines(path: Path) -> list[str]:
@@ -76,6 +77,17 @@ def validate_skill(skill_dir: Path) -> list[str]:
                 errors.append(f"{skill_name}: openai.yaml missing {required}")
         if f"${skill_name}" not in openai_text:
             errors.append(f"{skill_name}: default_prompt must mention ${skill_name}")
+
+        for key in ("icon_small", "icon_large"):
+            match = re.search(rf'{key}:\s+"([^"]+)"', openai_text)
+            if match:
+                asset_path = skill_dir / match.group(1).removeprefix("./")
+                if not asset_path.exists():
+                    errors.append(f"{skill_name}: {key} path does not exist")
+
+        color_match = re.search(r'brand_color:\s+"([^"]+)"', openai_text)
+        if color_match and not HEX_RE.match(color_match.group(1)):
+            errors.append(f"{skill_name}: brand_color is not a valid hex color")
 
     return errors
 

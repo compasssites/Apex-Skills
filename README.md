@@ -2,6 +2,10 @@
 
 Focused Agent Skills for Oracle APEX development workflows in IDEs and CLIs.
 
+Repository:
+
+- `https://github.com/compasssites/Apex-Skills`
+
 The collection is designed for:
 
 - Antigravity
@@ -75,12 +79,26 @@ The same linker can create project-local skill symlinks for the other supported 
 ./scripts/link_skills.sh /path/to/project codex cursor github-copilot antigravity
 ```
 
+## Install From GitHub
+
+For a private repository, prefer the local symlink flow above.
+
+Once the repository is public, install individual skills with:
+
+```sh
+npx skills add https://github.com/compasssites/Apex-Skills --skill oracle-apex-export-navigation
+npx skills add https://github.com/compasssites/Apex-Skills --skill oracle-apex-safe-edit
+npx skills add https://github.com/compasssites/Apex-Skills --skill oracle-apex-review
+```
+
+These GitHub install commands are the path that `skills.sh` indexes and tracks for public discovery.
+
 ## Publish Path
 
-1. Commit this repository to GitHub.
-2. Test install each skill explicitly, for example:
-   `npx skills add https://github.com/<owner>/<repo> --skill oracle-apex-safe-edit`
-3. Share the repository URL and the per-skill install commands.
+1. Change the GitHub repository visibility to public.
+2. Run the three `npx skills add ... --skill ...` commands above in a clean test project.
+3. Confirm the installed skills appear in the target agent skill directory.
+4. Share the repository URL and the exact per-skill install commands.
 
 ## Validation
 
