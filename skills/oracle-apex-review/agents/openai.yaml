@@ -1,0 +1,4 @@
+interface:
+  display_name: "Oracle APEX Review"
+  short_description: "Review Oracle APEX export changes and risks"
+  default_prompt: "Use $oracle-apex-review to review these Oracle APEX changes for regressions and workflow issues."

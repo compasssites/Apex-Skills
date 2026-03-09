@@ -1,0 +1,4 @@
+interface:
+  display_name: "Oracle APEX Safe Edit"
+  short_description: "Implement safe Oracle APEX export changes"
+  default_prompt: "Use $oracle-apex-safe-edit to implement this Oracle APEX change safely in exported files."
