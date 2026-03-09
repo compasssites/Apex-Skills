@@ -5,6 +5,7 @@ Focused Agent Skills for Oracle APEX development workflows in IDEs and CLIs.
 Repository:
 
 - `https://github.com/compasssites/Apex-Skills`
+- Skills CLI source: `compasssites/Apex-Skills`
 
 The collection is designed for:
 
@@ -86,12 +87,19 @@ For a private repository, prefer the local symlink flow above.
 Once the repository is public, install individual skills with:
 
 ```sh
-npx skills add https://github.com/compasssites/Apex-Skills --skill oracle-apex-export-navigation
-npx skills add https://github.com/compasssites/Apex-Skills --skill oracle-apex-safe-edit
-npx skills add https://github.com/compasssites/Apex-Skills --skill oracle-apex-review
+npx skills add compasssites/Apex-Skills --skill oracle-apex-export-navigation
+npx skills add compasssites/Apex-Skills --skill oracle-apex-safe-edit
+npx skills add compasssites/Apex-Skills --skill oracle-apex-review
 ```
 
 These GitHub install commands are the path that `skills.sh` indexes and tracks for public discovery.
+
+Useful checks:
+
+```sh
+npx skills add compasssites/Apex-Skills --list
+npx skills add compasssites/Apex-Skills --skill oracle-apex-safe-edit -a claude-code
+```
 
 ## Publish Path
 
