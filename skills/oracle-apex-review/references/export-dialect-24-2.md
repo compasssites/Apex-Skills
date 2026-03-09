@@ -15,6 +15,9 @@ Primary source:
 - missing import-safe header or missing literal `wwv_flow_imp.g_flow_id` setup when the script expects standalone SQLcl import
 - child components emitted before parent components
 - new IDs that look guessed instead of copied from exports or allocated from a stable high-number strategy
+- Interactive Grid metadata that does not keep the exact parent region ID linkage
+- Interactive Grid child calls reordered away from the emitted export structure
+- page-failure recovery guidance that continues after a partial import instead of delete-and-rerun
 
 ## Findings Language
 

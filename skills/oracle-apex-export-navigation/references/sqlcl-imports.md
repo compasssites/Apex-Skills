@@ -7,6 +7,7 @@ Use this file when producing concise import commands after an Oracle APEX change
 - Output commands only. Do not pretend they were executed.
 - Prefer the narrowest import path that matches the changed artifact.
 - Preserve the repository-relative export path.
+- Assume the operator is already connected in SQLcl and has the correct workspace, schema, and application context set before running `@...` imports.
 
 ## Examples
 
@@ -33,6 +34,7 @@ User interfaces import:
 - Whole-application imports unless the task explicitly needs them.
 - Long walkthrough text around the command.
 - Fake success text or narrated terminal output.
+- Import commands without first ensuring the split export on disk matches the target application.
 
 ## Path Handling
 

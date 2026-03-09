@@ -13,7 +13,7 @@ Use this file when the task is less about editing exports and more about finding
 
 ## Search Categories
 
-The Alfred workflow `uc-alfred-orclapex` is useful inspiration here. Its public description groups high-value APEX lookup data into categories such as:
+High-value APEX lookup areas include:
 
 - documentation
 - icons
@@ -24,7 +24,14 @@ The Alfred workflow `uc-alfred-orclapex` is useful inspiration here. Its public 
 - HTML snippets
 - APEX links
 
-For an IDE agent skill, treat those categories as a lookup checklist, not as a workflow format.
+Treat those categories as a lookup checklist, not as a workflow format.
+
+## Universal Theme Notes
+
+- Prefer existing `fa-...` Font APEX icon names already used in the application or listed in the project docs.
+- Prefer existing Universal Theme utility classes over guessed `u-...` class names.
+- When touching CSS classes or variables, verify against the project docs or Oracle APEX references before inventing new utility names.
+- If a UI change depends on exact icon modifiers or utility classes, cite the source used to choose them.
 
 ## Suggested Search Prompts
 

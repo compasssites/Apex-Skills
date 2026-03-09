@@ -35,6 +35,21 @@ Inside a page block, preserve parent-before-child order. Typical safe order:
 
 Breaking export order is a common cause of import failures and FK issues.
 
+## Interactive Grid Handling
+
+Interactive Grid exports are easy to break because the region, IG metadata, columns, validations, and DML process are tightly linked.
+
+- Create the IG parent region first with the exact wrapped region ID used by its child metadata.
+- Follow the export order from the split export exactly. A common pattern is:
+  1. `create_page_plug` for the IG region
+  2. `create_ig_report`
+  3. `create_ig_report_column` and any sibling IG column metadata emitted by the export
+  4. validations, row actions, or saved-report metadata in the same order as the export
+  5. `create_page_process` for `NATIVE_IG_DML` when the grid is editable
+- Keep the `p_region_id` and any related parent references identical to the parent region ID.
+- Do not invent IG child call order from memory. Clone the nearest working IG export and edit only the safe fields.
+- If the export contains additional IG metadata calls beyond `create_ig_report` and `create_ig_report_column`, keep them in the exact emitted order.
+
 ## Shared Component Isolation
 
 - Do not mix `wwv_flow_imp_shared.*` calls with `wwv_flow_imp_page.*` calls in the same begin/end block.
@@ -61,3 +76,4 @@ Breaking export order is a common cause of import failures and FK issues.
 ## Failure Recovery
 
 - If a page import fails mid-run, prefer the repository’s existing delete-and-rerun pattern rather than continuing from a partial page state.
+- At page level, that usually means running the split-export delete script for the page, or `wwv_flow_imp_page.remove_page(...)` if that exact pattern is already present in the project, then rerunning the full page import.
