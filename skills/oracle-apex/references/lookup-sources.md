@@ -4,10 +4,10 @@ Use this file when the task is less about editing exports and more about finding
 
 ## Official Sources
 
-- Oracle APEX 24.2 JavaScript API:
-  `https://docs.oracle.com/en/database/oracle/apex/24.2/aexjs/index.html`
-- Oracle APEX 24.2 API reference PDF:
-  `https://docs.oracle.com/en/database/oracle/apex/24.2/aeapi/oracle-apex-api-reference.pdf`
+- Oracle APEX JavaScript API (26.1):
+  `https://docs.oracle.com/en/database/oracle/apex/26.1/aexjs/index.html`
+- Oracle APEX API reference (26.1):
+  `https://docs.oracle.com/en/database/oracle/apex/26.1/aeapi/index.html`
 - Project-specific documentation hub:
   `https://apex-docs-5ka.pages.dev`
 
@@ -35,7 +35,7 @@ Treat those categories as a lookup checklist, not as a workflow format.
 
 ## Suggested Search Prompts
 
-- "Find the Oracle APEX 24.2 JavaScript API for this function"
+- "Find the Oracle APEX JavaScript API (26.1) for this function"
 - "Locate the shared component export for this LOV"
 - "Find the correct APEX internal view for this metadata question"
 - "Find the font-apex icon or utility CSS class that matches this UI change"

@@ -1,4 +1,4 @@
-# APEX 24.2 Export Dialect
+# APEX Export Dialect
 
 Use this file when generating, heavily editing, or reviewing Oracle APEX export SQL instead of making a small surgical change.
 
@@ -13,7 +13,7 @@ Primary source:
 - Use `wwv_flow_imp_shared.*` for shared components.
 - Wrap component metadata IDs with `wwv_flow_imp.id(...)`.
 - Do not wrap the page number passed to `create_page.p_id`.
-- Do not fall back to legacy `wwv_flow_api` package usage for APEX 24.2 exports.
+- Do not fall back to legacy `wwv_flow_api` package usage for modern APEX exports.
 
 ## Mandatory Header Pattern
 
@@ -85,6 +85,33 @@ Interactive Grid exports are easy to break because the region, IG metadata, colu
 - Interactive Grid metadata that does not keep the exact parent region ID linkage
 - Interactive Grid child calls reordered away from the emitted export structure
 - page-failure recovery guidance that continues after a partial import instead of delete-and-rerun
+
+## Release Differences That Break Diffs And Parsers
+
+Verified moving a real app from 24.2 to 26.1 (August 2026):
+
+- **26.1 emits components alphabetically**, where 24.2 emitted them in sequence order.
+  A raw diff between the two looks enormous while the actual content changes are few.
+  Sort both files' lines before comparing, or you will spend hours reading ordering noise.
+  One real page showed 1133 changed lines of which 79 were real.
+- **26.1 writes attributes 24.2 left implicit**: `p_static_id`, `p_source_type`,
+  `p_step_template`, `p_escape_on_http_output`, `p_plug_item_display_point`. Their
+  sudden appearance in a diff is not a change to the application.
+- **Authorization schemes moved** from `p_attribute_01` to
+  `p_attributes` / `plsql_function_body`. Any tooling that reads the old attribute
+  silently finds nothing.
+- **Files that disappear**: 26.1 no longer exports `application/user_interfaces.sql` or
+  `shared_components/user_interface/templates/popuplov.sql`. Their absence is correct,
+  not a truncated export.
+
+## Header Versions On Recovered Files
+
+When restoring a component from git history or an older backup, **leave its original
+`p_version_yyyy_mm_dd` and `p_release` alone.** They tell the import layer which upgrade
+path to apply. Rewriting the header to the current release claims the file is already
+current and skips those transformations.
+
+APEX imports exports from prior releases by design. An old header is not a problem to fix.
 
 ## Failure Recovery
 

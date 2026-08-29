@@ -17,8 +17,8 @@ This file captures the operating style behind this skill.
 When Oracle APEX details are uncertain, prefer:
 
 - `https://apex-docs-5ka.pages.dev`
-- `https://docs.oracle.com/en/database/oracle/apex/24.2/aexjs/index.html`
-- `https://docs.oracle.com/en/database/oracle/apex/24.2/aeapi/oracle-apex-api-reference.pdf`
+- `https://docs.oracle.com/en/database/oracle/apex/26.1/aexjs/index.html`
+- `https://docs.oracle.com/en/database/oracle/apex/26.1/aeapi/index.html`
 
 ## Editing Bias
 

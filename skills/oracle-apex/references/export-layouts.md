@@ -39,7 +39,7 @@ Plugin exports commonly sit under `application/shared_components/plugins/` with 
 
 Before choosing an export tree, inspect a top-level export file such as `application/set_environment.sql` or `application/create_application.sql` and confirm:
 
-- the Oracle APEX version comment near the top, for example `-- Application Express Version 24.2.x`
+- the Oracle APEX version comment near the top, for example `-- Application Express Version 26.1.x`
 - the application id from `wwv_flow_imp.g_flow_id := ...`
 
 Use those values to disambiguate similar export trees.

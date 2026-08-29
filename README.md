@@ -19,7 +19,7 @@ Antigravity here means an agent workflow that reads project-local skills from `.
 
 ## Included Skill
 
-- `oracle-apex`: one install that covers export navigation, safe edits, targeted SQLcl export/import commands, APEX 24.2 verification, and findings-first review.
+- `oracle-apex`: one install that covers export navigation, safe edits, targeted SQLcl export/import commands, version-correct API verification, upgrade and working-copy testing, and findings-first review.
 
 ## Trigger Examples
 
@@ -31,13 +31,15 @@ Antigravity here means an agent workflow that reads project-local skills from `.
 - "add an editable interactive grid to this page export"
 - "review this APEX export diff"
 - "is this page import safe?"
-- "check whether this generated SQL matches APEX 24.2"
+- "check whether this generated SQL matches the APEX release in the export header"
+- "we upgraded the instance, what should I test?"
+- "the dashboard broke in my working copy"
 
 ## Design Goals
 
 - Keep Oracle APEX split exports navigable for agents.
 - Separate backend SQL from APEX page exports.
-- Bias toward Oracle APEX 24.2 documentation.
+- Bias toward the Oracle APEX documentation matching the export header, defaulting to 26.1.
 - End with concise operator handoff commands instead of noisy walkthroughs.
 - Never run live Oracle server changes from the agent.
 
@@ -45,7 +47,7 @@ Antigravity here means an agent workflow that reads project-local skills from `.
 
 - The application export should already exist on disk in split format, or the operator should be able to run `apex export -applicationid ... -split`.
 - The operator should already be connected in SQLcl with the correct workspace, schema, and application context before running import commands.
-- Oracle APEX 24.2 is the default target unless the export header shows a different version.
+- Oracle APEX 26.1 is the default target unless the export header shows a different version.
 
 ## Local Development
 
