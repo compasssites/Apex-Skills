@@ -1,3 +1,11 @@
 .DS_Store
 *.pyc
 __pycache__/
+
+# Compass: generated output and agent scratch space
+node_modules/
+dist/
+build/
+.wrangler/
+coverage/
+.agent-tmp/
