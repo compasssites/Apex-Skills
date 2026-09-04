@@ -2,7 +2,21 @@ name: Validate Skills
 
 on:
   push:
+    paths-ignore:
+      - 'AGENTS.md'
+      - 'CLAUDE.md'
+      - 'PROJECT-NOTES.md'
+      - '.compass/**'
+      - '.claude/**'
+      - '**/*.md'
   pull_request:
+    paths-ignore:
+      - 'AGENTS.md'
+      - 'CLAUDE.md'
+      - 'PROJECT-NOTES.md'
+      - '.compass/**'
+      - '.claude/**'
+      - '**/*.md'
 
 jobs:
   validate:
