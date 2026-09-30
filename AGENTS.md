@@ -93,7 +93,7 @@ Add human notes here.
 <!-- compass:start:workflows -->
 # Shipping and verification
 
-- Ship each meaningful change with `/Users/macpro/CompassAgentMemory/bin/compass-ship "message" [files…]`. It stages (everything, or the files named), refuses secret-looking files, runs the project check, commits, and pushes in one approval. Do not run `git add`, `git commit`, or `git push` yourself, and do not re-run the check it runs. Name the files when the tree holds work that is not yours.
+- Ship each meaningful change with `/Users/macpro/CompassAgentMemory/bin/compass-ship "message" [files…]`. It stages (everything, or the files named), refuses secret-looking files, refuses new accessibility defects on changed React lines (clickable divs, untyped buttons, missing alt text, browser `alert`/`confirm`; fix them, do not disable the rule), runs the project check, commits, and pushes in one approval. Do not run `git add`, `git commit`, or `git push` yourself, and do not re-run the check it runs. Name the files when the tree holds work that is not yours.
 - Run D1 migrations yourself right after adding them: `npx wrangler d1 migrations apply <DB> --remote`. A git-push deploy never applies them.
 - In an auto-deploy repo the push is the deploy. Do not sleep, wait, or poll for it. Check a live URL only when the change altered URL or API behaviour; if the new build is not live yet, say it is building and stop.
 - Deploy styles, what counts as verification, and the client summary format: load the `compass-workflow` skill.
